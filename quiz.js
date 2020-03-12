@@ -4,6 +4,7 @@ var choices = Array.from(document.getElementsByClassName("choice-text"));
 var result = document.getElementById("result");
 var questionCounterText = document.getElementById("progress");
 var scoreText = document.getElementById("score");
+var timerText = document.getElementById("timer");
 
 //initialise variables
 let currentQuestion = {};
@@ -11,6 +12,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let secondsLeft = 60;
 
 //Constant variables
 const CORRECT_BONUS = 10;
@@ -44,13 +46,27 @@ var questions = [
     }
   ]
 
-
-
+//Setting the time limit for taking the quiz
+function setTime(){
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timerText.innerText = "Time left: " + secondsLeft ;
+    
+        if(secondsLeft === 0) {
+          clearInterval(timerInterval);
+          localStorage.setItem("latestScore",score);
+          //go to the end page
+          return window.location.assign('/end.html');
+        }
+      }, 1000);
+    }
 function startQuiz(){
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
+    setTime();
     getNewQuestion();
+
 }; 
 
 function getNewQuestion(){
@@ -89,9 +105,10 @@ choices.forEach(choice => {
             incrementScore(CORRECT_BONUS);
         } else{
             result.innerText = "Result of the answer: WRONG!"
+            secondsLeft -= 5;
         }
 
-        setTimeout(function(){getNewQuestion()},1500);
+        setTimeout(function(){getNewQuestion()},1000);
         
     });
 });
