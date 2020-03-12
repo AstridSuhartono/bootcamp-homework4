@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-     <link rel="stylesheet" href="style.css" />
-    <title>JSQuiz - Result</title>
-</head>
-<body>
-    <div class="container">
-        <div id="end">
-            <h1 class="display-4 text-center m-3" id="finalScore">0</h1>
-            <form class="form-group p-3 text-center">
-                <input type="text" name="username" id="username" placeholder="username"/>
-                <button type="submit" class="btn btn-secondary" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
-            </form>
-            <div class="text-center p-3">
-                <a class="btn btn-secondary col-4 m-2" href="/quiz.html">Play Again</a>
-                </br>
-                <a class="btn btn-secondary col-4 m-2" href="/">Go Home</a>
-            </div> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css" />
+        <title>JS Quiz - Result</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="end">
+                <h1 class="display-3 text-center m-3">Your Quiz Result</h1>
+                <h1 class="display-4 text-center m-3 p-1" id="finalScore">0</h1>
+                <form class="form-group p-3 text-center">
+                    <input type="text" name="username" id="username" placeholder="username"/>
+                    <button type="submit" class="btn btn-secondary" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
+                </form>
+                <div class="text-center p-3">
+                    <a class="btn btn-secondary col-4 m-2" href="/quiz.html">Play Again</a>
+                    </br>
+                    <a class="btn btn-secondary col-4 m-2" href="/">Go Home</a>
+                </div> 
+            </div>
         </div>
-    </div>
-    <script src="end.js"></script>
-</body>
+        <script src="end.js"></script>
+    </body>
 </html>
