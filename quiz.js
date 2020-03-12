@@ -1,15 +1,22 @@
+//get the html element that is going to be manipulated
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
 var result = document.getElementById("result");
 var questionCounterText = document.getElementById("progress");
 var scoreText = document.getElementById("score");
 
+//initialise variables
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+//Constant variables
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
+
+//create an array of the questions
 var questions = [
     {
       "question": "Inside which HTML element do we put the JavaScript??",
@@ -37,9 +44,7 @@ var questions = [
     }
   ]
 
-//CONSTANTS
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+
 
 function startQuiz(){
     questionCounter = 0;
