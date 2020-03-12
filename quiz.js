@@ -16,7 +16,7 @@ let secondsLeft = 60;
 
 //Constant variables
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 7;
 
 //create an array of the questions
 var questions = [
@@ -43,7 +43,39 @@ var questions = [
       "choice3": "msg('Hello World');",
       "choice4": "alert('Hello World');",
       "answer": 4
-    }
+    },
+    {
+        "question": " Hyper Text Markup Language Stand For?",
+        "choice1": "JavaScript",
+        "choice2": "XHTML",
+        "choice3": "CSS",
+        "choice4": "HTML",
+        "answer": 4
+      },
+      {
+        "question": " Which language is used for styling web pages?",
+        "choice1": "HTML",
+        "choice2": "JQuery",
+        "choice3": "CSS",
+        "choice4": "XML",
+        "answer": 3
+      },
+      {
+        "question": " Which is not a JavaScript Framework?",
+        "choice1": "Python Script",
+        "choice2": "JQuery",
+        "choice3": "Django",
+        "choice4": "NodeJS",
+        "answer": 3
+      },
+      {
+        "question": " Which is not a JavaScript Data Types?",
+        "choice1": "Null",
+        "choice2": "Number",
+        "choice3": "String",
+        "choice4": "Boolean",
+        "answer": 1
+      },
   ]
 
 //Setting the time limit for taking the quiz
