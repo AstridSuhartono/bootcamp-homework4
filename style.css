@@ -1,0 +1,20 @@
+body {
+    background-color: #ecf5ff;
+}
+
+.choice:hover{
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.choice-prefix{
+    background-color: cornflowerblue;
+}
+
+.choice-text{
+    background-color: white;
+}
+
+#result{
+    margin-top: 2rem;
+}
