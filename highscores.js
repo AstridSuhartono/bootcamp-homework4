@@ -10,4 +10,5 @@ highScoresList.innerHTML = highScores
   function deleteScores(e){
     e.preventDefault();
     localStorage.clear();
+    highScoresList.innerText = "";
 }
