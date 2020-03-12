@@ -4,7 +4,7 @@
 
 ### Brief Description
 
-A simple web application to let web developers do a coding assessment. The application will test the web developer in a form of multiple choice questions. There is a time limit of 60 seconds and every wrong answer will deduct the time by 5 seconds. This app is build by using HTML, CSS, and powered JavaScript to create a dynamic update on the HTML page.
+A simple web application to let web developers do a coding assessment. The application will test the web developer in a form of multiple choice questions. There is a time limit of 45 seconds and every wrong answer will deduct the time by 5 seconds. This app is build by using HTML, CSS, and powered JavaScript to create a dynamic update on the HTML page.
 
 ### Link to the Project
 

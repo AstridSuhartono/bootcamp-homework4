@@ -12,7 +12,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let secondsLeft = 60;
+let secondsLeft = 45;
 
 //Constant variables
 const CORRECT_BONUS = 10;
