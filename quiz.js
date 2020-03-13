@@ -78,7 +78,8 @@ var questions = [
       },
   ]
 
-//Setting the time limit for taking the quiz
+//Setting the timer countdown for the quiz, save current score, 
+//and direct the user to end page when time left reach 0.
 function setTime(){
     var timerInterval = setInterval(function() {
         secondsLeft--;
@@ -92,6 +93,8 @@ function setTime(){
         }
       }, 1000);
     }
+
+//function to run the quiz 
 function startQuiz(){
     questionCounter = 0;
     score = 0;
@@ -101,6 +104,8 @@ function startQuiz(){
 
 }; 
 
+//Display the questions array in random order and take the answer of the user as a dataset of number
+//Also direct the user to end page when user finish all the available questions
 function getNewQuestion(){
     if(availableQuestions.length == 0 || questionCounter>= MAX_QUESTIONS){
         localStorage.setItem("latestScore",score);
@@ -124,6 +129,9 @@ function getNewQuestion(){
     result.innerText = "Result of the answer:";
 };
 
+//Function to take the answer of the user when the user click any available answers,
+//and compare it with the correct answer to either increase score or decrease time left.
+//After that call function of getNewQuestion() to display next question
 choices.forEach(choice => {
     choice.addEventListener('click', e =>{
         if(!acceptingAnswers) return;
@@ -145,9 +153,11 @@ choices.forEach(choice => {
     });
 });
 
+//function to increment scores
 function incrementScore(num){
     score +=num;
     scoreText.innerText = "Score: " + score;
 }
 
+//call the startQuiz() function when an user start up the quiz.html
 startQuiz();
