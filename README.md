@@ -13,7 +13,7 @@ A simple web application to let web developers do a coding assessment. The appli
 
 ### Video Recording
 
-Click the following link to see the vide demo: 
+Click the following link to see the vide demo: https://drive.google.com/file/d/1mmoDjA6F4GbkraXs-Js4j5pSsrUNHRsr/view
 
 ### Build Instructions
 
