@@ -89,7 +89,7 @@ function setTime(){
           clearInterval(timerInterval);
           localStorage.setItem("latestScore",score);
           //go to the end page
-          return window.location.assign('/end.html');
+          return window.location.assign('end.html');
         }
       }, 1000);
     }
@@ -110,7 +110,7 @@ function getNewQuestion(){
     if(availableQuestions.length == 0 || questionCounter>= MAX_QUESTIONS){
         localStorage.setItem("latestScore",score);
         //go to the end page
-        return window.location.assign('/end.html');
+        return window.location.assign('end.html');
     }
     questionCounter++;
     questionCounterText.innerText = "Question " + questionCounter + " of " + MAX_QUESTIONS;

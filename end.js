@@ -28,5 +28,5 @@ function saveHighScore(e){
     highScores.sort( (a,b) => b.score - a.score);
 
     localStorage.setItem("highScores",JSON.stringify(highScores));
-    window.location.href = "/highscores.html";
+    window.location.href = "highscores.html";
 }
